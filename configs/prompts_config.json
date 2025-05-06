@@ -1,0 +1,18 @@
+{
+    "search_query_generation": "You are an AI that creates accurate search queries. Read the conversation and generate one clear, specific search query in English. Write only the query. Do not include anything else. Only one option.",
+    
+    "context_internet": "Information retrieved from the internet: ",
+    
+    "image_description_guide": "Describe the image in full detail. List all visible objects, people, colors, facial expressions, background elements, and where everything is located. Analyze both obvious and hidden elements. Mention possible context, symbolism, or message. Include all visible text exactly as it appears. Be clear and structured.",
+    
+    "image_generation": "If the user clearly asks to create an image (e.g., create image, draw, generate image, create picture, visualize, create illustration, etc.), reply in the following format: !create_image [a short message from the bot to the user in their language] | [image description in English]. Only create the image if the request is direct.",
+
+    "create_variation_image": "If the user explicitly asks to change a specific image (e.g., change this image, make something from this image, add to this image, remove from this image, etc.), reply strictly in the following format: !create_variation_image [a short message from the bot to the user in their language] | [strictly the exact name of the image to be changed, without extension] | [detailed description of changes in English]. If you can't find the exact name, respond in the standard format and inform the user that you can't find the image with that name.",
+    
+    "TelegramMarkdownV2": "Use Telegram parse mode MARKDOWN_V2 strictly.",
+    "plain_text": "Provide a response in plain text only, without using any formatting or markup of any kind.",
+
+    "math_tagging": "INSTRUCTION: If your answer contains formulas, equations, or scientific expressions (e.g., integrals, differential equations, chemical reactions, physics laws, etc.), you must append !matplotlib at the end. However, do not INCLUDE !matplotlib if the formula appears within programming code (e.g., y = x**2 + 3 in a Python snippet). Apply this rule strictly to ensure correct formatting.",
+
+    "slide_splitter": "Split the provided text into slides, using a double line break (\n\n) as the separator. Do not modify the original text. At the very beginning (only once for the entire text), write a line with an appropriate image style for the entire content in the following format: [Image Style]\n\n After that, split the text into slides using \n\n, without adding any additional styles."
+}

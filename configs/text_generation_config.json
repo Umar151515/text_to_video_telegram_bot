@@ -1,0 +1,25 @@
+{
+    "available_tools": ["ollama", "gpt4free", "openrouter"],
+    "selected_tool": "gpt4free",
+    
+    "tools_config": {
+        "ollama": {
+            "models": ["deepseek-r1:14b", "deepseek-r1:8b", "llama3.1:latest", "llama3.2-vision:latest"],
+            "selected_model": "llama3.1:latest",
+
+            "models_supporting_image": ["llama3.2-vision:latest"]
+        },
+
+        "openrouter": {
+            "models": ["deepseek/deepseek-r1:free", "deepseek/deepseek-r1-distill-llama-70b:free"],
+            "selected_model": "deepseek/deepseek-r1:free"
+        },
+        
+        "gpt4free": {
+            "models": ["gpt-4o-mini", "gpt-4o", "o1", "o3-mini", "deepseek-r1", "deepseek-v3", "gemini-2.0-flash", "gemini-2.0-flash-thinking"],
+            "selected_model": "gpt-4o-mini",
+
+            "web_search_providers": ["ChatGPT", "Blackbox", "RubiksAI"]
+        }
+    }
+}

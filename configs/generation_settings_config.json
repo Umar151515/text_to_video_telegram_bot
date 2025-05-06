@@ -1,0 +1,7 @@
+{
+    "temperature": 1,
+    "max_tokens": 5000,
+    "repeat_penalty": 1.1,
+    "response_delay": 0,
+    "stop_words": []
+}

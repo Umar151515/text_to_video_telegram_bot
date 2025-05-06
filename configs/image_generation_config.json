@@ -1,0 +1,12 @@
+{
+    "available_tools": ["gpt4free"],
+    "selected_tool": "gpt4free",
+
+    "tools_config": {
+        "gpt4free": {
+            "models": ["dall-e-3", "midjourney", "flux", "flux-pro"],
+            "selected_model": "dall-e-3"
+        }
+    }
+
+}
