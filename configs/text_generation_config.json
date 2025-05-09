@@ -1,5 +1,5 @@
 {
-    "available_tools": ["ollama", "gpt4free", "openrouter"],
+    "tools": ["ollama", "gpt4free", "openrouter"],
     "selected_tool": "gpt4free",
     
     "tools_config": {

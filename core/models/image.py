@@ -1,4 +1,4 @@
-from utils.image_utils.create_description import create_description_image
+from utils.image.create_description import create_description_image
 from config import image_folder_path
 
 

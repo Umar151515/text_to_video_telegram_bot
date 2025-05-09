@@ -3,6 +3,7 @@ from .generation_settings import GenerationSettings
 from .prompts_manager import PromptsManager
 from .text_generation import TextGeneration
 from .image_generation import ImageGeneration
+from .text_to_speech import TextToSpeech
 
 
 class ConfigManager:
@@ -11,6 +12,7 @@ class ConfigManager:
     prompts: PromptsManager = PromptsManager()
     text: TextGeneration = TextGeneration()
     image: ImageGeneration = ImageGeneration()
+    text_to_speech: TextToSpeech = TextToSpeech()
 
     @classmethod
     def reload_all(cls):
@@ -19,3 +21,4 @@ class ConfigManager:
         cls.prompts = PromptsManager()
         cls.text = TextGeneration()
         cls.image = ImageGeneration()
+        cls.text_to_speech = TextToSpeech()

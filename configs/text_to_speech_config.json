@@ -1,0 +1,30 @@
+{
+    "tools": ["coqui", "gpt4free"],
+    "selected_tool": "coqui",
+    
+    "tools_config": {
+        "coqui": {
+            "models": ["tts_models/multilingual/multi-dataset/xtts_v2"],
+            "selected_model": "tts_models/multilingual/multi-dataset/xtts_v2",
+
+            "models_config": {
+                "tts_models/multilingual/multi-dataset/xtts_v2": {
+                    "speakers": {
+                        "Alison Dietlinde": "A neutral and professional female voice, great for formal content like instructions, presentations, or announcements. Sounds precise and easy to understand.",
+                        "Viktor Eka": "A deep, masculine voice with a balanced tone—neither too robotic nor too dramatic. Good for voiceovers, commercials, or storytelling.",
+                        "Andrew Chipper": "A versatile male voice that adapts well to different speaking styles. Sounds friendly and engaging, making it suitable for educational content or casual dialogue.",
+                        "Nova Hogarth": "A highly expressive female voice that can sound both natural and dynamic. Ideal for creative projects like animations, games, or character voices."
+                    },
+                    "selected_speaker": "Viktor Eka"
+                }
+            }
+        },
+        
+        "gpt4free": {
+            "speakers": {
+                "gpt-4o-audio": "pleasant female voice"
+            },
+            "selected_speaker": "gpt-4o-audio"
+        }
+    }
+}

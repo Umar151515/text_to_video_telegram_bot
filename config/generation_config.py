@@ -22,18 +22,26 @@ class GenerationConfig:
         with open(self.config_path, "r", encoding="utf-8") as config_file:
             self.config = json.load(config_file)
 
-    def _tool_check(self, tool: str):
-        if tool not in self.available_tools:
+    def _tool_check(self, tool:str|None = None):
+        if not tool:
+            tool = self.selected_tool
+
+        if tool not in self.tools:
             raise ValueError(f"Tool '{tool}' is not in available tools")
         
-    def _model_check(self, tool: str, model: str):
+    def _model_check(self, tool:str|None = None, model:str|None = None):
+        if not tool:
+            tool = self.selected_tool
+        if not model:
+            model = self.get_selected_model(tool)
         self._tool_check(tool)
+        
         if model not in self.config["tools_config"][tool]["models"]:
             raise ValueError(f"model '{model}' is not in models for '{tool}'")
 
     @property
-    def available_tools(self) -> list[str]:
-        return self.config.get("available_tools")
+    def tools(self) -> list[str]:
+        return self.config.get("tools")
     
     @property
     def selected_tool(self) -> str:
@@ -90,7 +98,7 @@ class GenerationConfig:
     def set_selected_model(self, model: str, tool:str|None = None):
         if not tool:
             tool = self.selected_tool
-        self._model_check(tool, model)
+        self._tool_check(tool)
         self.config["tools_config"][tool]["selected_model"] = model
         
         self.save()

@@ -1,6 +1,6 @@
 import asyncio
 
-from utils.video_utils.create import create_video_from_text
+from utils.video.create import create_video_from_text
 
 
 asyncio.run(create_video_from_text("""История Жаныбаева Ислама: Битва за пол квартиры

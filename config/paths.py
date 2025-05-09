@@ -7,6 +7,7 @@ generation_settings_config_path = config_folder_path / "generation_settings_conf
 image_generation_config_path = config_folder_path / "image_generation_config.json"
 prompts_config_path = config_folder_path / "prompts_config.json"
 text_generation_config_path = config_folder_path / "text_generation_config.json"
+text_to_speech_config_path = config_folder_path / "text_to_speech_config.json"
 
 data_folder_path = Path("data")
 image_folder_path = data_folder_path / "images"
