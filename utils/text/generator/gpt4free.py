@@ -5,7 +5,7 @@ from core.models import Messages
 
 
 async def generate_text_gpt4free(messages: Messages, model: str = None, web_search: bool = False) -> str:
-    client = g4f.AsyncClient()
+    client = g4f.AsyncClient(provider=g4f.Provider.PollinationsAI)
 
     if web_search:
         query_messages = messages.get_messages() 
