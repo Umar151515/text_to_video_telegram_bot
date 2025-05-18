@@ -31,8 +31,7 @@ async def create_description_image_gpt4free(image: str | bytes) -> str:
         return response.choices[0].message.content
     
     except Exception as e:
-        print(f"Unexpected error during image description: {e}")
-        return None
+        return f"Unexpected error during image description: {e}"
     finally:
         if isinstance(image, str):
             image_file.close()

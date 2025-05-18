@@ -10,7 +10,7 @@ async def generate_image(
         model:str = None, 
         selected_tool:str = None, 
         output_path:str = None,
-        max_attempts:int = 3
+        max_attempts:int = 6
     ) -> bytes:
 
     generation_method = selected_tool or ConfigManager.image.selected_tool

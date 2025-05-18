@@ -7,7 +7,7 @@ from TTS.api import TTS
 from config import ConfigManager
 
 
-async def text_to_speech_coqui(text: str, speaker:str = None, output_path:str = None, model:str = None) -> numpy.ndarray:
+async def text_to_speech_coqui(text: str, speaker:str = None, language:str = None, output_path:str = None, model:str = None) -> numpy.ndarray:
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     if not model:
@@ -16,12 +16,14 @@ async def text_to_speech_coqui(text: str, speaker:str = None, output_path:str = 
         speaker = ConfigManager.text_to_speech.get_selected_speaker("coqui", model)
 
     tts = TTS(model).to(device)
-    language, _ = langid.classify(text)
+
+    if not language:
+        language, _ = langid.classify(text)
 
     if ".wav" in speaker:
-        audio = tts.tts(text=text, speaker_wav=speaker, language="ru")
+        audio = tts.tts(text=text, speaker_wav=speaker, language=language)
     else:
-        audio = tts.tts(text=text, speaker=speaker, language="ru")
+        audio = tts.tts(text=text, speaker=speaker, language=language)
 
     audio = numpy.array(audio, dtype=numpy.float32)
 

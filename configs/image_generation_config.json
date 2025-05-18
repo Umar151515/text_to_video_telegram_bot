@@ -5,7 +5,7 @@
     "tools_config": {
         "gpt4free": {
             "models": ["dall-e-3", "midjourney", "flux", "flux-pro"],
-            "selected_model": "dall-e-3"
+            "selected_model": "midjourney"
         }
     }
 

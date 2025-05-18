@@ -4,7 +4,7 @@
     
     "tools_config": {
         "coqui": {
-            "models": ["tts_models/multilingual/multi-dataset/xtts_v2"],
+            "models": ["tts_models/multilingual/multi-dataset/xtts_v2", "tts_models/multilingual/multi-dataset/your_tts"],
             "selected_model": "tts_models/multilingual/multi-dataset/xtts_v2",
 
             "models_config": {
@@ -16,6 +16,13 @@
                         "Nova Hogarth": "A highly expressive female voice that can sound both natural and dynamic. Ideal for creative projects like animations, games, or character voices."
                     },
                     "selected_speaker": "Viktor Eka"
+                },
+
+                "tts_models/multilingual/multi-dataset/your_tts": {
+                    "speakers": {
+
+                    },
+                    "selected_speaker": ""
                 }
             }
         },

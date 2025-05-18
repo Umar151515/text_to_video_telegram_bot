@@ -22,4 +22,4 @@ def crop_text(text: str, percent_crop: float) -> str:
 def extract_parts_by_pipe(text: str, command: str) -> list[str] | None:
     if command not in text:
         return None
-    return [part.strip() for part in text.replace(command, "").split("|")]
+    return [part.strip().strip("[]") for part in text.replace(command, "").split("|")]

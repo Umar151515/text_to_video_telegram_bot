@@ -35,6 +35,6 @@ async def generate_text(
             if attempt < max_attempts - 1:
                 continue
             else:
-                return e
+                raise e
                 
     return "Unexpected error in text generation" 

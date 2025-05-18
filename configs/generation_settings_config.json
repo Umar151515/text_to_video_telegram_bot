@@ -2,6 +2,6 @@
     "temperature": 1,
     "max_tokens": 5000,
     "repeat_penalty": 1.1,
-    "response_delay": 0,
+    "response_delay": 1,
     "stop_words": []
 }
